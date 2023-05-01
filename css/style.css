@@ -1,0 +1,94 @@
+*{
+    box-sizing:border-box ;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+height: 100%;
+overflow: hidden;
+position: relative;
+background: url(../img/фон.jpg) center/cover;
+}
+
+
+img {
+max-width:100%;
+}
+
+.content {
+height: 100%;
+animation: zoom 5s 1s;
+}
+
+
+.title {
+text-align: center;
+animation: zoom 2s 9s backwards;
+text-transform: uppercase;
+color: red;
+font-size: 50px;
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw5OxNHy9gm-HFZPNRXRGXkQRjEtDrtqJyfQ&usqp=CAU);
+background-size: cover;
+background-repeat: no-repeat;
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+margin: 0;
+}
+
+
+.main {
+width: 500px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+.main__back-wrap {
+position: relative;
+animation: run-left 3s 6s forwards;
+
+}
+
+
+.main__back-img {
+
+}
+
+
+.main__front-wrap {
+position: absolute;
+top: 0 ;
+left: 0;
+transform: translateX(300px);
+animation: run-right 3s 6s forwards;
+}
+
+
+.main__front-img {
+
+}
+
+@keyframes zoom {
+    0% {transform: scale(0);
+    }
+
+    100% {transform: scale(1);}
+}
+@keyframes run-left {
+    100% {
+        transform: translateX(-196px);
+    }
+}
+@keyframes run-right{
+    100% {
+        transform: translateX(285px);
+    }
+}
